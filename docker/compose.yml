@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  foundation_stereo:
+    image: foundation_stereo:latest
+    build: .
+    container_name: foundation_stereo
+    runtime: nvidia
+    environment:
+      - NVIDIA_DISABLE_REQUIRE=1
+      - DISPLAY=${DISPLAY}
+      - GIT_INDEX_FILE
+    network_mode: host
+    ipc: host
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    volumes:
+      - ../:/app # Assuming you want the parent directory mounted at /app
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /tmp:/tmp
+    stdin_open: true
+    tty: true

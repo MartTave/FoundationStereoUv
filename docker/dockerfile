@@ -45,5 +45,8 @@ RUN conda activate my &&\
 ENV SHELL=/bin/bash
 RUN ln -sf /bin/bash /bin/sh
 
+RUN mkdir /app
+
+WORKDIR /app
 
 SHELL ["/bin/bash", "-c", "source ~/.bashrc && conda activate my"]
