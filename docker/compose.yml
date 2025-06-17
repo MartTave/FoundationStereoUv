@@ -5,7 +5,6 @@ services:
     image: foundation_stereo:latest
     build: .
     container_name: foundation_stereo
-    runtime: nvidia
     environment:
       - NVIDIA_DISABLE_REQUIRE=1
       - DISPLAY=${DISPLAY}
