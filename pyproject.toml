@@ -1,0 +1,33 @@
+[project]
+name = "foundation"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "albumentations",
+    "einops",
+    "gdown",
+    "huggingface-hub",
+    "imageio",
+    "imgaug",
+    "joblib",
+    "jupyterlab",
+    "ninja",
+    "nodejs",
+    "omegaconf",
+    "open3d",
+    "opencv-contrib-python",
+    "pyyaml",
+    "ruamel-yaml",
+    "scikit-image",
+    "scikit-learn",
+    "scipy",
+    "timm",
+    "torch",
+    "torchaudio",
+    "torchvision",
+    "transformations",
+    "trimesh",
+    "xformers",
+]
