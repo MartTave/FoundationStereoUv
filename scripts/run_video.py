@@ -72,6 +72,7 @@ if __name__ == "__main__":
     index = 0
     while True:
         ret, img = cap.read()
+        print(img.shape)
         if not ret:
             break
         index += 1
