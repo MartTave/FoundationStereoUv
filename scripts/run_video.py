@@ -65,10 +65,9 @@ if __name__ == "__main__":
     model.cuda()
     model.eval()
     cap = cv2.VideoCapture(args.video)
-    writter = cv2.VideoWriter("./vis.png", cv2.VideoWriter_fourcc(*"mjpg"), 30, (1920, 1080))
+    writter = cv2.VideoWriter("./vis.png", cv2.VideoWriter_fourcc(*"mp4v"), 30, (3840, 1080))
     scale = args.scale
     assert scale <= 1, "scale must be <=1"
-    H, W = (1920, 1080)
     index = 0
     while True:
         ret, img = cap.read()
@@ -79,6 +78,7 @@ if __name__ == "__main__":
 
         img0 = img[:, :1920]
         img1 = img[:, 1920:]
+        H, W = img0.shape[:2]
         img0_ori = img0.copy()
         img0 = torch.as_tensor(img0).cuda().float()[None].permute(0, 3, 1, 2)
         img1 = torch.as_tensor(img1).cuda().float()[None].permute(0, 3, 1, 2)
