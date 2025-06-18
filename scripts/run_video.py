@@ -23,7 +23,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--video", default=f"{code_dir}/../assets/left.png", type=str)
     parser.add_argument("--intrinsic_file", default=f"{code_dir}/../assets/K.txt", type=str, help="camera intrinsic matrix and baseline file")
-    parser.add_argument("--ckpt_dir", default=f"{code_dir}/../pretrained_models/23-51-11/model_best_bp2.pth", type=str, help="pretrained model path")
+    parser.add_argument("--ckpt_dir", default=f"{code_dir}/../pretrained_models/11-33-40/model_best_bp2.pth", type=str, help="pretrained model path")
     parser.add_argument("--out_dir", default=f"{code_dir}/../output/", type=str, help="the directory to save results")
     parser.add_argument("--scale", default=1, type=float, help="downsize the image by scale, must be <=1")
     parser.add_argument("--hiera", default=0, type=int, help="hierarchical inference (only needed for high-resolution images (>1K))")
