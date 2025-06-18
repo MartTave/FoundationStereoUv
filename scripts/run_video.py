@@ -78,6 +78,8 @@ if __name__ == "__main__":
 
         img0 = img[:, :1920]
         img1 = img[:, 1920:]
+        img0 = cv2.resize(img0, fx=scale, fy=scale, dsize=None)
+        img1 = cv2.resize(img1, fx=scale, fy=scale, dsize=None)
         H, W = img0.shape[:2]
         img0_ori = img0.copy()
         img0 = torch.as_tensor(img0).cuda().float()[None].permute(0, 3, 1, 2)
