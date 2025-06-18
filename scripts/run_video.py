@@ -94,4 +94,5 @@ if __name__ == "__main__":
         vis = vis_disparity(disp)
         vis = np.concatenate([img0_ori, vis], axis=1)
         writter.write(vis)
+        print(f"Done frame {index}")
     print(f"Finished, done : {index} frames")
